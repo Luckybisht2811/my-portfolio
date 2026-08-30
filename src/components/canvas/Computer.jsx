@@ -23,7 +23,7 @@ const Computers = ({ isMobile }) => {
         angle={0.12}
         penumbra={1}
         intensity={1}
-        castShadow={!isMobile}
+        castShadow
         shadow-mapSize={1024}
       />
 
@@ -73,8 +73,8 @@ const ComputerCanvas = () => {
   return (
     <Canvas
       frameloop="demand"
-      shadows={!isMobile}
-      dpr={isMobile ? 1 : [1, 2]}
+      shadows
+      dpr={[1, 2]}
       camera={{
         position: [20, 3, 5],
         fov: 25,
@@ -82,11 +82,9 @@ const ComputerCanvas = () => {
       gl={{
         preserveDrawingBuffer: true,
       }}
-      style={{ touchAction: "pan-y" }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enabled={!isMobile}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
@@ -101,5 +99,4 @@ const ComputerCanvas = () => {
 };
 
 export default ComputerCanvas;
-
 useGLTF.preload("./desktop_pc/scene.gltf");
