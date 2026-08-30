@@ -58,9 +58,9 @@ const Hero = () => {
 
 
       {/* Scroll Down */}
-      <div className="absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center z-10">
+      <div className="absolute bottom-24 sm:bottom-10 w-full flex justify-center items-center z-20">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 bg-[#050816]/40 backdrop-blur-sm">
             <motion.div
               animate={{
                 y: [0, 24, 0],
