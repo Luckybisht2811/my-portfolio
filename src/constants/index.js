@@ -9,11 +9,16 @@ import websiteBuilderVideo from "../assets/projects/Website_generate.mp4";
 
 import shoppingImg from "../assets/projects/Shopping.png";
 import shoppingVideo from "../assets/projects/Shopping.mp4";
-
+import concentrixLogo from "../assets/company/cnx.png";
+import PlacemantraLogo from "../assets/company/p.jpeg";
 export const navLinks = [
   {
     id: "about",
     title: "About",
+  },
+  {
+    id: "experience",
+    title: "Experience"
   },
   {
     id: "skills",
@@ -101,8 +106,28 @@ export const technologies = [
 ];
 
 export const experiences = [
-  // Experience section abhi intentionally empty hai.
-  // Future mein actual experience yahan add karenge.
+  { title: "Analyst",
+    company_name: "Concentrix Technology India Private Limited",
+    icon: concentrixLogo,
+    iconBg: "#E6DEDD",
+    date: "July 2025 - January 2026",
+    points: [
+      "Analyzed data and processes to identify patterns and improve operational efficiency, working with structured datasets and reporting tools in a fast-paced corporate environment.",
+      "Collaborated with cross-functional teams and communicated findings clearly, building strong professional and problem-solving habits applicable to real-world software projects.",
+    ],
+  },
+  {
+    title: "Data Science Intern",
+    company_name: "Placemantra",
+    icon: PlacemantraLogo,
+    iconBg: "#383E56",
+    date: "March 2025 - May 2025",
+    points: [
+      "Worked on data analysis and machine learning projects using Python, gaining hands-on experience with data cleaning, visualization, and building predictive models.",
+      "Strengthened problem-solving and analytical thinking skills that translate directly into writing efficient, logic-driven code as a developer.",
+    ],
+  }
+
 ];
 
 export const testimonials = [];

@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 import { logo } from "../assets";
 import { navLinks } from "../constants";
 
-const EMAIL = "lalitsinghbisht282002@gmail.com"; // Navbar.jsx wali email se match kar lena
+const EMAIL = "lalitsinghbisht282002@gmail.com";
 
+const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(
+  "Portfolio Contact",
+)}`;
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
     <footer className="relative w-full bg-[#050816] border-t border-white/10 mt-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-16 py-14">
-
         <div className="flex flex-col md:flex-row justify-between gap-12">
-
           {/* ================= BRAND ================= */}
           <div className="max-w-sm">
             <Link
@@ -94,7 +95,9 @@ const Footer = () => {
               </a>
 
               <a
-                href={`mailto:${EMAIL}`}
+                href={gmailComposeLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Email"
                 className="text-secondary hover:text-white text-2xl transition-all hover:scale-110"
               >
@@ -103,13 +106,14 @@ const Footer = () => {
             </div>
 
             <a
-              href={`mailto:${"lalitsinghbisht282002@gmail.com"}`}
+              href={gmailComposeLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-secondary hover:text-white text-[14px] transition-colors"
             >
               {EMAIL}
             </a>
           </div>
-
         </div>
 
         {/* ================= COPYRIGHT ================= */}
@@ -118,10 +122,9 @@ const Footer = () => {
             © {year} Lalit Singh Bisht. All rights reserved.
           </p>
           <p className="text-secondary text-[13px]">
-            Built with React, Tailwind CSS & Three.js
+            Let's work and build something great together
           </p>
         </div>
-
       </div>
     </footer>
   );

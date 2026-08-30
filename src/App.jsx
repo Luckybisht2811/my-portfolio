@@ -8,7 +8,7 @@ import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
-// import Experience from "./components/Experience";
+import Experience from "./components/Experience";
 
 const App = () => {
   return (
@@ -22,13 +22,13 @@ const App = () => {
         </div>
 
         <About />
+        <Experience />
 
         <Tech />
 
         <Works />
 
-        {/* Future use */}
-        {/* <Experience /> */}
+     
         <Contact/>
         <Footer/>
 
