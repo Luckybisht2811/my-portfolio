@@ -6,8 +6,23 @@ const CustomCursor = () => {
     x: 0,
     y: 0,
   });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaChange = (e) => setIsMobile(e.matches);
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // mobile pe listener hi mat lagao
+
     const handleMouseMove = (e) => {
       setPosition({
         x: e.clientX,
@@ -20,7 +35,10 @@ const CustomCursor = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [isMobile]);
+
+  // Mobile pe kuch bhi render mat karo
+  if (isMobile) return null;
 
   return (
     <img
