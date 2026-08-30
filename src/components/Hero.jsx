@@ -55,24 +55,21 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down */}
-      <a
-        href="#about"
-        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[999]"
-      >
-        <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 bg-[#050816]/40 backdrop-blur-sm">
-          <motion.div
-            animate={{
-              y: [0, 24, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-            className="w-3 h-3 rounded-full bg-secondary mb-1"
-          />
-        </div>
-      </a>
+      <div className="absolute bottom-8 sm:bottom-10 w-full flex justify-center items-center z-20 pointer-events-auto">
+        <a href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 bg-[#050816]/40 backdrop-blur-sm">
+            <motion.div
+              animate={{ y: [0, 24, 0] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
+          </div>
+        </a>
+      </div>
     </section>
   );
 };
