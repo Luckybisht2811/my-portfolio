@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 top-[100px] z-10">
+      <div className="absolute inset-x-0 bottom-0 top-[280px] sm:top-[180px] z-10 pointer-events-auto">
         <ComputerCanvas />
       </div>
 
