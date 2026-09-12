@@ -7,6 +7,9 @@ import dpiDashboard from "../assets/projects/dpi-dashboard.png";
 import websiteBuilderImg from "../assets/projects/website.png";
 import websiteBuilderVideo from "../assets/projects/Website_generate.mp4";
 
+import expenceTrackerVideo from "../assets/projects/SMS_expence.mp4";
+import expenceTrackerImg from "../assets/projects/sms.png";
+
 import shoppingImg from "../assets/projects/Shopping.png";
 import shoppingVideo from "../assets/projects/Shopping.mp4";
 import concentrixLogo from "../assets/company/cnx.png";
@@ -138,18 +141,9 @@ export const projects = [
     description:
       "Real-time Deep Packet Inspection system that captures live network traffic, extracts hostnames from encrypted HTTPS via TLS SNI parsing, and actively blocks domains at the OS level by injecting TCP RST packets — similar to how ISPs and enterprise firewalls filter traffic. Built from scratch to understand DPI, TLS, and network-layer enforcement.",
     tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "fastapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "redis",
-        color: "pink-text-gradient",
-      },
+      { name: "python", color: "blue-text-gradient" },
+      { name: "fastapi", color: "green-text-gradient" },
+      { name: "redis", color: "pink-text-gradient" },
     ],
     image: dpiDashboard,
     video: null,
@@ -162,18 +156,9 @@ export const projects = [
     description:
       "An AI-powered website builder that lets users generate complete, ready-to-use websites from a simple text prompt. Built on the MERN stack with a React drag-and-drop-style editor on the frontend and a Node/Express API that handles AI-driven content and layout generation, with results persisted to MongoDB so users can revisit and edit their generated sites.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "mongodb", color: "pink-text-gradient" },
     ],
     image: websiteBuilderImg,
     video: websiteBuilderVideo,
@@ -186,22 +171,29 @@ export const projects = [
     description:
       "A full-stack Django eCommerce platform where users browse products across categories, manage their cart, checkout with Cash on Delivery or Razorpay online payments, and track order history. Includes an integrated AI shopping assistant to help users find products, plus an admin dashboard for managing inventory and orders.",
     tags: [
-      {
-        name: "django",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "razorpay",
-        color: "green-text-gradient",
-      },
-      {
-        name: "python",
-        color: "pink-text-gradient",
-      },
+      { name: "django", color: "blue-text-gradient" },
+      { name: "razorpay", color: "green-text-gradient" },
+      { name: "python", color: "pink-text-gradient" },
     ],
     image: shoppingImg,
     video: shoppingVideo,
     source_code_link: "https://github.com/Luckybisht2811/shopping-website-django",
     live_demo_link: "https://lucky-store28.onrender.com/",
+  },
+
+  {
+    name: "Ledgerly — Auto Expense Tracker from SMS/Email",
+    description:
+      "A full-stack MERN expense tracker that eliminates manual expense logging by parsing real bank/UPI transaction SMS and emails through a custom regex extraction engine, then auto-categorizing each transaction with a rule-based system that learns from user corrections — a category fix on one transaction is remembered for every future transaction from that merchant. Includes a merchant-grouping algorithm that detects recurring subscriptions by analyzing charge-amount consistency and interval patterns between transactions, per-category budget alerts, and a live dashboard driven by MongoDB aggregation pipelines for spending trends and category breakdowns.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "express", color: "red-text-gradient" },
+      { name: "mongodb", color: "pink-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+    ],
+    image: expenceTrackerImg,
+    video: expenceTrackerVideo,
+    source_code_link: "https://github.com/Luckybisht2811/ledgerly",
+    live_demo_link: "https://ledgerly-seven-inky.vercel.app/",
   },
 ];

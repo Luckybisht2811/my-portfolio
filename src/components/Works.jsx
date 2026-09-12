@@ -83,7 +83,7 @@ const ProjectCard = ({ index, project }) => {
 
         {/* Tech Stack (2-3 tags) */}
         <div className="mt-4 flex flex-wrap gap-2 flex-shrink-0">
-          {project.tags?.slice(0, 3).map((tag) => (
+          {project.tags?.slice(0, 4).map((tag) => (
             <p
               key={`${project.name}-${tag.name}`}
               className={`text-[13px] font-medium px-2 py-1 rounded-full bg-white/5 ${tag.color}`}
