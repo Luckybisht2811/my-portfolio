@@ -25,10 +25,8 @@ const About = () => {
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-
       {/* LEFT SIDE: text content */}
       <div className="flex-1">
-
         {/* Open to work badge */}
         <motion.div
           variants={fadeIn("down", "spring", 0, 1)}
@@ -38,9 +36,7 @@ const About = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
           </span>
-          <p className="text-secondary text-[13px] font-medium">
-            Open to Work
-          </p>
+          <p className="text-secondary text-[13px] font-medium">Open to Work</p>
         </motion.div>
 
         <motion.div variants={textVariant()}>
@@ -69,16 +65,15 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-6 max-w-3xl text-secondary text-[17px] leading-[30px]"
         >
-          I'm a passionate software developer focused on building
-          modern, responsive, and user-friendly web applications.
-          I enjoy turning ideas into real-world digital experiences
-          using modern technologies and clean, maintainable code.
+          I'm a passionate software developer focused on building modern,
+          responsive, and user-friendly web applications. I enjoy turning ideas
+          into real-world digital experiences using modern technologies and
+          clean, maintainable code.
           <br />
-          <br />
-          I work with technologies such as React, JavaScript, Python,
-          Node.js, SQL, and other tools to build full-stack
-          applications. I'm always learning new technologies and
-          improving my problem-solving skills.
+          <br />I work with technologies such as React, JavaScript, Python,
+          Node.js, SQL, and other tools to build full-stack applications. I'm
+          always learning new technologies and improving my problem-solving
+          skills.
         </motion.p>
 
         {/* Stats row + GitHub icon */}
@@ -91,9 +86,7 @@ const About = () => {
               <span className="text-white text-[26px] font-bold">
                 {stat.value}
               </span>
-              <span className="text-secondary text-[13px]">
-                {stat.label}
-              </span>
+              <span className="text-secondary text-[13px]">{stat.label}</span>
             </div>
           ))}
 
@@ -110,7 +103,11 @@ const About = () => {
           >
             <motion.svg
               animate={{ y: [0, -4, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               className="w-9 h-9 text-white"
@@ -122,12 +119,9 @@ const About = () => {
         </motion.div>
 
         {/* Resume download button */}
-        <motion.div
-          variants={fadeIn("up", "spring", 0.2, 1)}
-          className="mt-8"
-        >
-          
-        <a     href="/Lalit_Singh_Bisht(Dev).pdf"
+        <motion.div variants={fadeIn("up", "spring", 0.2, 1)} className="mt-8">
+          <a
+            href="/Lalit_Singh_Bisht(Dev).pdf"
             download="Lalit_Singh_Bisht(Dev).pdf"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full
                        bg-gradient-to-r from-[#4A90E2] to-[#8E2DE2]
@@ -157,19 +151,29 @@ const About = () => {
       {/* RIGHT SIDE: animated character image */}
       <motion.div
         variants={fadeIn("left", "spring", 0.3, 1)}
-        className="flex-1 flex justify-center lg:justify-end"
+        className="flex-1 flex justify-center lg:justify-end relative"
       >
-        <motion.img
-          src="/crt.webp"
-          alt="Character illustration"
-          className="w-[280px] md:w-[420px] lg:w-[480px]"
+        {/* Glow blob background */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-[300px] h-[300px] md:w-[420px] md:h-[420px] bg-gradient-to-tr from-blue-500/30 via-purple-500/20 to-pink-500/30 rounded-full blur-3xl" />
+        </div>
+
+        {/* Image wrapper with gradient border */}
+        <motion.div
+          className="relative p-[3px] rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500"
           animate={{ y: [0, -15, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="relative rounded-2xl overflow-hidden">
+            <img
+              src="/prtimg.jpeg"
+              alt="Lalit Singh Bisht"
+              className="w-[260px] md:w-[380px] lg:w-[440px] h-[340px] md:h-[480px] lg:h-[560px] object-cover object-[center_20%]"
+            />
+            {/* Vignette overlay - dark fade at edges */}
+            <div className="absolute inset-0 rounded-2xl shadow-[inset_0_0_60px_30px_rgba(15,23,42,0.6)] pointer-events-none" />
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
