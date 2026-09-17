@@ -4,6 +4,9 @@
 
 import dpiDashboard from "../assets/projects/dpi-dashboard.png";
 
+import aiBuddyImg from "../assets/projects/AI_Interview_buddy.png";
+import aiBuddyVideo from "../assets/projects/AI_Interview_buddy.mp4";
+
 import websiteBuilderImg from "../assets/projects/website.png";
 import websiteBuilderVideo from "../assets/projects/Website_generate.mp4";
 
@@ -149,6 +152,22 @@ export const projects = [
     video: null,
     source_code_link: "https://github.com/Luckybisht2811/dpi-network-platform",
     live_demo_link: null,
+  },
+  {
+    name: "AI Interview-Buddy",
+    description:
+    "AI-powered mock interview platform that simulates real interview experiences, generates personalized questions, analyzes responses, and provides detailed performance feedback to help users improve their interview skills.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "Firebase", color: "red-text-gradient" },
+      { name: "OpenRouter", color: "yellow-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+    ],
+    image: aiBuddyImg,
+    video: aiBuddyVideo,
+    source_code_link: "https://github.com/Luckybisht2811/ai-interview-buddy",
+    live_demo_link: "https://ai-interview-buddy-kappa.vercel.app/",
   },
 
   {
