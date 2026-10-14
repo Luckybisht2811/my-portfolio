@@ -121,14 +121,15 @@ const About = () => {
         {/* Resume download button */}
         <motion.div variants={fadeIn("up", "spring", 0.2, 1)} className="mt-8">
           <a
-            href="/Lalit_Singh_Bisht(Dev).pdf"
-            download="Lalit_Singh_Bisht(Dev).pdf"
+            href="/Lalit_Singh_Bisht(dev).pdf"
+            download="Lalit_Singh_Bisht(dev).pdf"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full
                        bg-gradient-to-r from-[#4A90E2] to-[#8E2DE2]
                        text-white font-semibold text-[16px]
                        shadow-card hover:opacity-90 hover:scale-105
                        transition-all duration-300"
           >
+            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
